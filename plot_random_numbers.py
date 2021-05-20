@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
-import random
+import json
 
-numbers = random.choices(range(0,101), k = 1000)
+with open('numbers.json') as f:
+    numbers = json.load(f)
 
 plt.hist(numbers, bins = 75)
 plt.show()
-
